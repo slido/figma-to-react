@@ -1,13 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hideMenuNav {
+  /* display: none; */
+  left:-270px;
+  display: block;
+  position: fixed;
+  width: 40%;
+  height: 100vh;
+  top: 0;
+  background: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
 }
+
+.showMenuNav {
+  display: block;
+  position: fixed;
+  width: 40%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slidInNav {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+/* The element to apply the animation to */
+/* div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: slidInNav;
+  animation-duration: 4s;
+} */
